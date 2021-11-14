@@ -1,0 +1,4 @@
+*.idea
+*.iml
+/models/my_model/
+/models/packaged/
