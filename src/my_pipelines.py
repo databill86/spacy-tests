@@ -35,9 +35,9 @@ class CustomAttributeRuler(AttributeRuler):
 
         super(CustomAttributeRuler, self).__init__(vocab=nlp.vocab, name=name, validate=True)
 
-        self.add_rules_anonymization()
+        self.add_rules_fix_bug_segmentation()
 
-    def add_rules_anonymization(self):
+    def add_rules_fix_bug_segmentation(self):
         pattern = {'attrs': {'DEP': '', 'HEAD': 0, 'SENT_START': 0},
                    'index': 0,
                    'patterns': [[{}]]}
