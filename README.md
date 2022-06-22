@@ -6,7 +6,7 @@
 conda create --name nlp-spacy-tests python=3.8
 conda activate nlp-spacy-tests
 pip install -r requirements.txt 
-python -m spacy download -d fr_core_news_lg-3.2.0
+python -m spacy download fr_core_news_sm
 ```
 
 
