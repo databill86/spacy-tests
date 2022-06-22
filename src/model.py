@@ -22,7 +22,7 @@ for token in doc:
     print(token, token.pos_)
 for sent in doc.sents:
     print(sent)
-print(doc.has_annotation("DEP"))
+assert doc.has_annotation("DEP") == True
 
 save = False
 if save:
