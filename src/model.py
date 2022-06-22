@@ -9,7 +9,7 @@ import logging as logger
 
 import my_pipelines  # noqa
 
-nlp = spacy.load("fr_core_news_lg", exclude=["ner", "parser", "attribute_ruler"])
+nlp = spacy.load("fr_core_news_sm", exclude=["ner"])
 
 nlp.add_pipe("custom_attr_ruler")
 nlp.add_pipe("custom_sent")
@@ -21,9 +21,10 @@ doc = nlp(text)
 for token in doc:
     print(token, token.pos_)
 for sent in doc.sents:
-    logger.info(sent)
+    print(sent)
+print(doc.has_annotation("DEP"))
 
-save = True
+save = False
 if save:
     path_model = "../models/my_model"
     pathlib.Path(path_model).mkdir(parents=True, exist_ok=True)
